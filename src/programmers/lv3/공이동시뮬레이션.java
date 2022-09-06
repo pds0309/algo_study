@@ -81,7 +81,7 @@ public class 공이동시뮬레이션 {
             queryInfo.maxRow = Math.min(queryInfo.rowBound - 1L, queryInfo.maxRow + value);
         }),
         COL_UP((value, queryInfo) -> {
-            queryInfo.maxCol -= maxValueConflictedByMaxBound(queryInfo.minCol, queryInfo.colBound - 1) ? 0 : value;
+            queryInfo.maxCol -= maxValueConflictedByMaxBound(queryInfo.maxCol, queryInfo.colBound - 1) ? 0 : value;
             queryInfo.minCol = Math.max(0, queryInfo.minCol - value);
         }),
         COL_DOWN((value, queryInfo) -> {
