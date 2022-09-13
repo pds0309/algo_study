@@ -1,0 +1,9 @@
+SELECT NAME AS name, NVL(td, 0) AS travelled_distance
+FROM USERS U
+LEFT JOIN (
+    SELECT USER_ID, SUM(DISTANCE) AS td
+    FROM RIDES
+    GROUP BY USER_ID
+    ) R
+ON U.ID = R.USER_ID
+ORDER BY 2 DESC, 1
