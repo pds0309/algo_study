@@ -76,3 +76,9 @@
 **커밋 메시지 예시**
 
 `solved: pg/N-Queen/N/15`
+
+<br>
+
+### History 
+
+[22-10-18 회고](https://github.com/pds0309/algo_study/wiki/22-10-18---%ED%95%99%EC%8A%B5-%ED%9A%8C%EA%B3%A0)
