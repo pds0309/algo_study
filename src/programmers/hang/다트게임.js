@@ -4,7 +4,7 @@ function solution(dartResult) {
     const darts = [...dartResult.matchAll(/[0-9]+[SDT][*#]?/g)].map(v => v[0]);
     let doubledValue = 0;
     let tempPrev = 0;
-    return darts.reduce((prev, next, arr, arr2) => {
+    return darts.reduce((prev, next) => {
         const [resp, prevDouble] = dartToScore(next);
         if(prevDouble) {
             doubledValue += tempPrev;
